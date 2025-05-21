@@ -22,31 +22,30 @@ const AddCharacter = () => {
   });
   return (
     <>
-      <Container sx={{background:"linear-gradient(135deg, #f6d365, #fda085)", display: "flex", justifyContent: "center" }}>
-        <Box component="section" sx={{color: "#f1f1f1", background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)", p: 2, border: '1px dashed grey', display: "flex", flexDirection: "column", gap: 2, mb: 4 }}>
+      <Container sx={{maxWidth: '100',objectFit: 'cover',height: 'auto',  background:"linear-gradient(135deg, #f6d365, #fda085)", display: "flex", justifyContent: "center" }}>
+        <Box component="section" sx={{   color: "#f1f1f1", background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)", p: 2, border: '1px dashed grey', display: "flex", flexDirection: "column", gap: 2, mb: 4 }}>
           <form onSubmit={formik.handleSubmit}>
             <label htmlFor="email">Nombre</label>
             <input
-              id="email"
+              id="fullName"
               name="fullName"
               type="text"
               onChange={formik.handleChange}
               value={formik.values.fullName}
             />
 
-            <button type="submit">Submit</button>
           </form>
           <form onSubmit={formik.handleSubmit}>
-            <label htmlFor="email">  Titulo</label>
+             <div className=""></div><label htmlFor="email">  Titulo</label>
             <input
-              id="email"
+              id="title"
               name="title"
               type="text"
               onChange={formik.handleChange}
               value={formik.values.title}
             />
 
-            <button type="submit">Submit</button>
+           
           </form>
           
         </Box>
@@ -54,26 +53,26 @@ const AddCharacter = () => {
         <form onSubmit={formik.handleSubmit}>
             <label htmlFor="email">Familia</label>
             <input
-              id="email"
+              id="family"
               name="family"
               type="text"
               onChange={formik.handleChange}
               value={formik.values.family}
             />
 
-            <button type="submit">Submit</button>
+           
           </form>
           <form onSubmit={formik.handleSubmit}>
             <label htmlFor="email">Imagen</label>
             <input
-              id="email"
+              id="imageUrl"
               name="imageUrl"
-              type="img"
+              type=""
               onChange={formik.handleChange}
               value={formik.values.imageUrl}
             />
 
-            <button type="submit">Submit</button>
+            <button type="submit">Agregar Personaje</button>
           </form>
     </Box>
 
