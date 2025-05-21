@@ -6,14 +6,22 @@ import ContainCard from "./Components/ContainCard.jsx";
 import Footer from "./Components/Footer.jsx";
 import charactersGOT from "./data.js";
 import data from "./data.js";
+
+
+
+
+
 function App() {
-  const [characters, setCharacters] = useState(data);
+  const initialCharacters = JSON.parse(localStorage.getItem("gotCharacters")) || charactersGOT;
+  const [characters, setCharacters] = useState(initialCharacters);
 
 
 
   console.log(characters);
-  return <div>
+  return <div sx={{background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)"}}>
+     
     <Header />
+   
     <AddCharacter />
     <Banner />
     <ContainCard characters={characters} />
