@@ -22,9 +22,9 @@ const AddCharacter = () => {
   });
   return (
     <>
-      <Container sx={{maxWidth: '100',objectFit: 'cover',height: 'auto',  background:"linear-gradient(135deg, #f6d365, #fda085)", display: "flex", justifyContent: "center" }}>
-        <Box component="section" sx={{   color: "#f1f1f1", background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)", p: 2, border: '1px dashed grey', display: "flex",flexDirection:"column" , gap: 2, mb: 4,
-    height: 150,alignSelf: 'center', boxShadow: 2,}}>
+      <Container maxWidth="xl" sx={{Width: '100%',objectFit: 'cover',height: 'auto',  background:"linear-gradient(135deg, #f6d365, #fda085)", display: "flex", justifyContent: "center" }}>
+        <Box component="section" sx={{  p: { xs: 2, sm: 4 },  color: "#f1f1f1", background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)", p: 2, border: '1px dashed grey', display: "flex",flexDirection:"column" , gap: 2, mb: 4,
+     boxShadow: 2,}}>
           <form onSubmit={formik.handleSubmit}>
             <label htmlFor="email">Nombre</label>
             <input
