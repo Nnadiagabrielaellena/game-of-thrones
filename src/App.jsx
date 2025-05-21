@@ -22,7 +22,7 @@ function App() {
 
 
   console.log(characters);
-  return <div sx={{background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)"}}>
+  return <div maxWidth="xl"  sx={{background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)"}}>
      <ThemeProvider theme={theme}>
       <CssBaseline /> 
       <Header />

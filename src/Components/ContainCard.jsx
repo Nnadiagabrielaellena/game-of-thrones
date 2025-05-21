@@ -1,13 +1,13 @@
-import { useState } from 'react';
+
 import Card from '../../Card ';
 
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
+
 import Container from '@mui/material/Container';
 
 
-;
+
 
 
 import Grid from '@mui/material/Grid';
@@ -24,7 +24,7 @@ function ContainCard({ characters }) {
           background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
           color: "#f1f1f1",
           minHeight: '100vh',
-          py: 5,
+         
         }}
       >
         <Grid container spacing={4} justifyContent="center">
