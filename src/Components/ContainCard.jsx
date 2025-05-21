@@ -27,17 +27,17 @@ function ContainCard({ characters }) {
 
 
 <CssBaseline />
-      <Container maxWidth="false"sx={{color: "#f1f1f1", background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)", height: '100%',display:"flex", flexDirection:"column ", justifyContent:"center", alignItems:"center" }}>
-        <Box  />
+      <Container maxWidth="false"sx={{color: "#f1f1f1", background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)", height: '100%',display:"flex", flexDirection:"column ", justifyContent:"center", alignItems:"center", }}>
+        <Box sx={{ width: '100%', height:" 200",objectFit: 'cover',borderRadius: 2}} />
         {
         characters.map(c =>
 
-          <Card
+          <Card 
             index={c.id}
             fullName={c.fullName}
             title={c.title}
             family={c.family}
-            imageUrl={c.imageUrl}
+            imageUrl={c.imageUrl} 
           />
         )
       }
