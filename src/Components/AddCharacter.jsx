@@ -6,7 +6,7 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 const validationSchema = Yup.object({
   fullName: Yup.string()
-    .max(15, 'Máximo 15 caracteres')
+    .max(20, 'Máximo 20 caracteres')
     .required('Nombre es requerido'),
   title: Yup.string()
     .max(20, 'Máximo 20 caracteres')

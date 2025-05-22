@@ -5,7 +5,7 @@ import Banner from "./Components/Banner.jsx";
 import ContainCard from "./Components/ContainCard.jsx";
 import Footer from "./Components/Footer.jsx";
 import charactersGOT from "./data.js";
-import data from "./data.js";
+
 
 
 
