@@ -6,7 +6,7 @@ import Container from '@mui/material/Container';
 
 import Grid from '@mui/material/Grid';
 
-function ContainCard({ characters }) {
+function ContainCard({ characters ,onDeleteCharacter}) {
   return (
     <>
       
@@ -23,14 +23,17 @@ function ContainCard({ characters }) {
           {characters.map((c) => (
             <Grid item xs={12} sm={6} md={4} lg={3} key={c.id}>
               <Card
-                index={c.id}
+                id={c.id}
                 fullName={c.fullName}
                 title={c.title}
                 family={c.family}
                 imageUrl={c.imageUrl}
+                onDelete={onDeleteCharacter}
+               
               />
             </Grid>
           ))}
+          
         </Grid>
       </Container>
     </>

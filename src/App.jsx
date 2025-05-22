@@ -19,13 +19,19 @@ function App() {
     localStorage.setItem("gotCharacters", JSON.stringify(updatedCharacters));
   };
 
+  const deleteCharacter = (idToDelete) => {
+    const updatedCharacters = characters.filter(character => character.id !== idToDelete);
+    setCharacters(updatedCharacters);
+    localStorage.setItem("gotCharacters", JSON.stringify(updatedCharacters));
+  };
+
   console.log(characters);
   return <div maxWidth="xl" sx={{ background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)" }}>
 
     <Header />
     <AddCharacter onAddCharacter={addCharacter} />
     <Banner />
-    <ContainCard characters={characters} />
+    <ContainCard characters={characters} onDeleteCharacter={deleteCharacter} />
     <Footer />
 
 
