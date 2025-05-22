@@ -4,13 +4,25 @@ import * as Yup from 'yup';
 
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-
 const validationSchema = Yup.object({
-  fullName: Yup.string().required('Nombre es requerido'),
-  title: Yup.string().required('Título es requerido'),
-  family: Yup.string().required('Familia es requerida'),
-  imageUrl: Yup.string().url('Debe ser una URL válida').required('La imagen es requerida'),
+  fullName: Yup.string()
+    .max(15, 'Máximo 15 caracteres')
+    .required('Nombre es requerido'),
+  title: Yup.string()
+    .max(20, 'Máximo 20 caracteres')
+    .required('Título es requerido'),
+  family: Yup.string()
+    .max(20, 'Máximo 20 caracteres')
+    .required('Familia es requerida'),
+  imageUrl: Yup.string()
+    .url('Debe ser una URL válida')
+    .required('La imagen es requerida'),
 });
+
+
+
+
+
 
 const AddCharacter = () => {
   const formik = useFormik({
@@ -60,6 +72,7 @@ const AddCharacter = () => {
           name="fullName"
           type="text"
           onChange={formik.handleChange}
+          onBlur={formik.handleBlur} 
           value={formik.values.fullName}
         />
         {formik.touched.fullName && formik.errors.fullName && (
@@ -72,6 +85,7 @@ const AddCharacter = () => {
           name="title"
           type="text"
           onChange={formik.handleChange}
+          onBlur={formik.handleBlur} 
           value={formik.values.title}
         />
         {formik.touched.title && formik.errors.title && (
@@ -84,6 +98,7 @@ const AddCharacter = () => {
           name="family"
           type="text"
           onChange={formik.handleChange}
+          onBlur={formik.handleBlur} 
           value={formik.values.family}
         />
         {formik.touched.family && formik.errors.family && (
@@ -96,6 +111,7 @@ const AddCharacter = () => {
           name="imageUrl"
           type="url"
           onChange={formik.handleChange}
+          onBlur={formik.handleBlur} 
           value={formik.values.imageUrl}
         />
         {formik.touched.imageUrl && formik.errors.imageUrl && (
