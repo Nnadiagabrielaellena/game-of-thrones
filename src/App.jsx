@@ -8,10 +8,9 @@ import charactersGOT from "./data.js";
 import data from "./data.js";
 
 
-import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-const theme = createTheme();
+
+
 
 
 
@@ -22,17 +21,15 @@ function App() {
 
 
   console.log(characters);
-  return <div maxWidth="xl"  sx={{background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)"}}>
-     <ThemeProvider theme={theme}>
-      <CssBaseline /> 
-      <Header />
-   
+  return <div maxWidth="xl" sx={{ background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)" }}>
+
+    <Header />
     <AddCharacter />
     <Banner />
     <ContainCard characters={characters} />
     <Footer />
-    </ThemeProvider>
-    
+
+
 
   </div>;
 }
