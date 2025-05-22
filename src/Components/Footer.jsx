@@ -28,7 +28,7 @@ function Footer() {
     <Box sx={{ display: 'flex', gap: 1 }}>
       <IconButton
         component={Link}
-        href="nadiaell@hotmail.com"
+        href="mailto:nadiaell@hotmail.com"
         color="inherit"
         aria-label="Correo"
         sx={{
