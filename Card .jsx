@@ -2,9 +2,6 @@ import React from 'react';
 
 import Box from '@mui/material/Box';
 
-
-
-
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 
@@ -21,11 +18,11 @@ function Card({ id, fullName, title, family, imageUrl }) {
       <Avatar
         alt={`Imagen de ${fullName}`}
         src={imageUrl}
-        sx={{ width: 120, height: 120, mt: 2 }}
+        sx={{ width: 200, height: 200, mt: 2 }}
       />
     </Box>
     </>
-  );
+  );n
 }
 
 export default Card;
