@@ -18,13 +18,17 @@ function App() {
   const initialCharacters = JSON.parse(localStorage.getItem("gotCharacters")) || charactersGOT;
   const [characters, setCharacters] = useState(initialCharacters);
 
-
+  const addCharacter = (newCharacter) => {
+    const updatedCharacters = [...characters, newCharacter];
+    setCharacters(updatedCharacters);
+    localStorage.setItem("gotCharacters", JSON.stringify(updatedCharacters));
+  };
 
   console.log(characters);
   return <div maxWidth="xl" sx={{ background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)" }}>
 
     <Header />
-    <AddCharacter />
+    <AddCharacter onAddCharacter={addCharacter} />
     <Banner />
     <ContainCard characters={characters} />
     <Footer />

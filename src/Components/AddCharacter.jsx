@@ -24,7 +24,7 @@ const validationSchema = Yup.object({
 
 
 
-const AddCharacter = () => {
+const AddCharacter = ({ onAddCharacter }) => {
   const formik = useFormik({
     initialValues: {
       fullName: '',
@@ -33,8 +33,9 @@ const AddCharacter = () => {
       imageUrl: '',
     },
     validationSchema,
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: (values, { resetForm }) => {
+      onAddCharacter(values);   
+      resetForm();             
     },
   });
 
