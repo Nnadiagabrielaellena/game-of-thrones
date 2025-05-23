@@ -16,10 +16,12 @@ function ContainCard({ characters ,onDeleteCharacter}) {
           background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
           color: "#f1f1f1",
           minHeight: '100vh',
+          pt: 6,
+          mt: 2
          
         }}
       >
-        <Grid container spacing={4} justifyContent="center">
+        <Grid container spacing={4} justifyContent="center"sx={{ mt: 2 }}>
           {characters.map((c) => (
             <Grid item xs={12} sm={6} md={4} lg={3} key={c.id}>
               <Card

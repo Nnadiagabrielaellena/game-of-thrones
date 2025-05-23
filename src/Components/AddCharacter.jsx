@@ -2,6 +2,8 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
+
+
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 const validationSchema = Yup.object({
@@ -54,7 +56,7 @@ const AddCharacter = ({ onAddCharacter }) => {
           p: { xs: 2, sm: 4 },
           color: '#f1f1f1',
           background: 'linear-gradient(135deg, #0f2027, #203a43, #2c5364)',
-          display: 'flex',
+          
           flexDirection: 'column',
           gap: 2,
           boxShadow: 2,
