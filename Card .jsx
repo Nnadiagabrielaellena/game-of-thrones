@@ -1,41 +1,78 @@
 import React from 'react';
 
-import Box from '@mui/material/Box';
+
 
 import Typography from '@mui/material/Typography';
-import Avatar from '@mui/material/Avatar';
+
 
 
 import Button from '@mui/material/Button';
 
 
+import CardMUI from '@mui/material/Card';
 
-function Card({ id, fullName, title, family, imageUrl,onDelete  }) {
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+
+function Card({ id, fullName, title, family, imageUrl, onDelete }) {
   return (
     <>
-      <Box component="section" sx={{ p: 2, width: "100%" }}>
-        
-        <Typography variant="subtitle1">Index: {id}</Typography>
-        <Typography variant="h5">Nombre: {fullName}</Typography>
-        <Typography variant="subtitle1">Título: {title}</Typography>
-        <Typography variant="subtitle1">Familia: {family}</Typography>
-        <Avatar
-          alt={`Imagen de ${fullName}`}
-          src={imageUrl}
-          sx={{ width: 200, height: 200, mt: 2 }}
+
+
+      <CardMUI sx={{ maxWidth: 345 }}>
+        <CardMedia
+          sx={{ height: 140, objectFit: 'cover', width: '100%', borderBottom: '1px solid #ccc' }}
+          image={imageUrl}
+          title="personaje"
         />
+        <CardContent  sx={{ background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
+    color: "#f1f1f1",fontFamily: "'Cinzel', serif",
+    letterSpacing: 2,
+    
+    }}>
+          <Typography variant="subtitle1">Index: {id}
+
+          </Typography>
+          <Typography variant="h5"> {fullName}
+            Lizard
+          </Typography>
+          <Typography variant="subtitle1">Título: {title}
+
+          </Typography>
+          <Typography variant="subtitle1">Familia: {family}
+
+          </Typography>      </CardContent>
         <Button
-  variant=""
-  color="error"
-  sx={{ mt: 2 }}
-  onClick={() => onDelete(id)}
->
-  Eliminar
-</Button>
-        
-      </Box>
+          variant="error"
+          color="error"
+          sx={{
+            alignSelf: 'flex-end',
+            mx: 2,
+            mb: 2,
+            fontSize: '0.75rem',           // Más pequeño
+            px: 2,
+            py: 0.5,
+            textTransform: 'none',
+            background: 'linear-gradient(135deg, #0f2027, #203a43, #2c5364)', // Mismo fondo
+            color: '#f1f1f1',              // Texto claro
+            border: '1px solid #2c5364',  // Borde sutil
+            borderRadius: 1,
+            boxShadow: '0 0 4px rgba(0,0,0,0.4)',
+            '&:hover': {
+              background: 'linear-gradient(135deg, #1b2a33, #2a4458, #3b5d75)',
+              boxShadow: '0 0 6px rgba(255,255,255,0.2)',
+            }
+          }}
+          onClick={() => onDelete(id)}
+        >
+          Eliminar
+        </Button>
+      </CardMUI>
+
+
+
     </>
-  ); n
+  );
 }
 
 export default Card;

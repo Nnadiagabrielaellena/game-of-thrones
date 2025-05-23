@@ -6,7 +6,7 @@ function Banner() {
     <img
       src={bannerImage}
       alt="Banner de Game of Thrones"
-      style={{ width: '100%', height: '400px', objectFit: 'cover' }}
+      style={{ width: '100%', height: '500px', objectFit: 'cover' }}
     />
   )
 }

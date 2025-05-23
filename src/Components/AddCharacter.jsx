@@ -121,6 +121,10 @@ const AddCharacter = ({ onAddCharacter }) => {
 
         <button type="submit">Agregar Personaje</button>
       </Box>
+
+
+
+      
     </Container>
   );
 };

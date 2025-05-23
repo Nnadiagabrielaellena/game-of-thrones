@@ -9,6 +9,8 @@ import charactersGOT from "./data.js";
 
 
 
+
+
 function App() {
   const initialCharacters = JSON.parse(localStorage.getItem("gotCharacters")) || charactersGOT;
   const [characters, setCharacters] = useState(initialCharacters);
