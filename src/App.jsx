@@ -7,10 +7,6 @@ import Footer from "./Components/Footer.jsx";
 import charactersGOT from "./data.js";
 
 
-
-
-
-
 function App() {
   const initialCharacters = JSON.parse(localStorage.getItem("gotCharacters")) || charactersGOT;
   const [characters, setCharacters] = useState(initialCharacters);
@@ -35,9 +31,6 @@ function App() {
     <Banner />
     <ContainCard characters={characters} onDeleteCharacter={deleteCharacter} />
     <Footer />
-
-
-
   </div>;
 }
 

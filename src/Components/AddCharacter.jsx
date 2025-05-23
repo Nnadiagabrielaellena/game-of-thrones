@@ -19,11 +19,6 @@ const validationSchema = Yup.object({
     .required('La imagen es requerida'),
 });
 
-
-
-
-
-
 const AddCharacter = ({ onAddCharacter }) => {
   const formik = useFormik({
     initialValues: {
@@ -121,7 +116,6 @@ const AddCharacter = ({ onAddCharacter }) => {
 
         <button type="submit">Agregar Personaje</button>
       </Box>
-
 
 
       

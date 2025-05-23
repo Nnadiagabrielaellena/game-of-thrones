@@ -1,11 +1,5 @@
 import React from 'react';
-
-
-
 import Typography from '@mui/material/Typography';
-
-
-
 import Button from '@mui/material/Button';
 
 
@@ -17,19 +11,18 @@ import CardMedia from '@mui/material/CardMedia';
 function Card({ id, fullName, title, family, imageUrl, onDelete }) {
   return (
     <>
-
-
       <CardMUI sx={{ maxWidth: 345 }}>
         <CardMedia
           sx={{ height: 140, objectFit: 'cover', width: '100%', borderBottom: '1px solid #ccc' }}
           image={imageUrl}
           title="personaje"
         />
-        <CardContent  sx={{ background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
-    color: "#f1f1f1",fontFamily: "'Cinzel', serif",
-    letterSpacing: 2,
-    
-    }}>
+        <CardContent sx={{
+          background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
+          color: "#f1f1f1", fontFamily: "'Cinzel', serif",
+          letterSpacing: 2,
+
+        }}>
           <Typography variant="subtitle1">Index: {id}
 
           </Typography>

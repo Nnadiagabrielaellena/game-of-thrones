@@ -24,9 +24,8 @@ function  Header({}) {
         variant="h2"
         component="section"
         sx={{
-          fontFamily: "'Cinzel', serif", // Fuente medieval
-          letterSpacing: 2,
-          textShadow: "2px 2px 4px rgba(0,0,0,0.8)", // Efecto épico
+          fontFamily: "'Cinzel', serif",
+          textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
           color: "#e0dede",
         }}
       >
