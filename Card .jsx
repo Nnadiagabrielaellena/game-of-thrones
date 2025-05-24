@@ -13,7 +13,7 @@ function Card({ id, fullName, title, family, imageUrl, onDelete }) {
     <>
       <CardMUI sx={{ maxWidth: 345 }}>
         <CardMedia
-          sx={{ height: 140, objectFit: 'cover', width: '100%', borderBottom: '1px solid #ccc' }}
+          sx={{ height: 300, objectFit: 'cover', width: '100%', borderBottom: '1px solid #ccc' }}
           image={imageUrl}
           title="personaje"
         />
